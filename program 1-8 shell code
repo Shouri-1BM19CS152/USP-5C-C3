@@ -1,0 +1,82 @@
+#!/bin/sh
+
+# Expt-1: Check if a given year is leap year or not
+
+
+# read year
+
+# mod4=`expr $year % 4`
+# mod100=`expr $year % 100`
+# mod400=`expr $year % 400`
+
+# if [ $mod4 -eq 0 -a $mod100 -ne 0 ]
+# then
+#     echo "$year is leap year"
+# elif [ $mod400 -eq 0 ]
+# then
+#     echo "$year is a leap year"
+# else
+#     echo "$year is not leap year"
+# fi
+
+# Expt-2: Read 3 numbers and find greatest among them
+
+# read a b c
+
+# if [ $a -gt $b -a $a -gt $c ]
+# then
+#     echo "$a is greatest number"
+# elif [ $b -gt $c -a $b -gt $a ]
+# then
+#     echo "$b is greatest number"
+# else
+#     echo "$c is greatest number"
+# fi
+
+# Expt=3: Given number is +ve -ve or zero
+
+# read a
+
+# if [ $a -gt 0 ]
+# then
+#     echo "$a is positive"
+# elif [ $a -eq 0 ]
+# then
+#     echo "$a is equal to zero"
+# else
+#     echo "$a is negative"
+# fi
+
+#area of the circle
+# read radius
+
+# area=`expr 3.14\*$radius\*$radius |bc`
+# echo "Area of circle with radius $radius = $area"
+
+# echo $a $b $c
+
+#program 4-8
+read n
+
+i=1
+odd=0
+even=0
+all=0
+prod=1
+while [ $i -le $n ]
+do
+    if [ `expr $i % 2` -ne 0 ]
+    then
+        odd=`expr $odd + $i`
+    elif [ `expr $i % 2` -eq 0 ]
+    then
+        even=`expr $even + $i`
+    fi
+    all=`expr $all + $i`
+    prod=`expr $prod \* $i`
+    i=`expr $i + 1`
+done
+echo "Sum of all even numbers=$even"
+echo "Sum of all odd numbers=$"
+echo "Sum of all numbers=$all"
+echo "Factorial of all numbers=$prod"
